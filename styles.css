@@ -1,0 +1,43 @@
+body {
+  background-color: lightgrey;
+  color: rgb(55, 54, 54);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 2;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.lines-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines-number {
+  margin-left: 0.5rem;
+  font-weight: 700;
+  color: darkslategrey;
+}
+
+.btn-generate {
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid;
+  border-radius: 2px;
+  padding: 0.35rem 1.5rem;
+  margin-right: 3rem;
+}
+
+.text-area {
+  padding: 3rem;
+  letter-spacing: 0.05rem;
+}
