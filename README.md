@@ -1,1 +1,0 @@
-# newfoundry-challenge
