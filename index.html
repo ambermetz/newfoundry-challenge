@@ -10,14 +10,15 @@
 <body>
     <h1 class="play-title">A Midsummer Night's Dream</h1>
     <div class="lines-button">
-        <div class="button-section">
-            <button onclick="fetchXMLData()" type="button" class="btn-generate">Generate</button>
+        <div class="button-section" id="button-section" >
+            <label for="lorem-lines">Number of Lines</label>
+            <input type="number" id="lorem-lines" /> 
+            <button type="submit" class="btn-generate" onclick="fetchXMLData()" >Generate</button>
         </div>
-            <div class="lines-result">
-                <h3>Number of lines in play</h3>
-                <p class="lines-number" id="lines"></p>
-            </div>
-        </div>
+        <!-- <div class="lines-result">
+            <h3>Number of lines in play</h3>
+            <p class="lines-number" id="lines"></p>
+        </div> -->
     </div>
     <div class="text">
         <p class="text-area" id="play"></p>
