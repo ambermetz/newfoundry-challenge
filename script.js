@@ -8,30 +8,27 @@ function fetchXMLData() {
     .then(function (xml) {
       const parser = new DOMParser();
       let xmlDoc = parser.parseFromString(xml, 'text/xml');
+      const randomLines = [];
 
       let nodeList = xmlDoc.getElementsByTagName('line');
-      let node = nodeList.item(
-        Math.floor(Math.random() * nodeList.length)
-      ).innerHTML;
+      // let node = nodeList.item(
+      //   Math.floor(Math.random() * nodeList.length)
+      // ).innerHTML;
 
       let linesNumber = document.getElementById('lorem-lines').value;
 
       function lineInputResult() {
-        // document.getElementById('play').innerHTML = node;
+        for (let i = 0; i < linesNumber; i++) {
+          randomLines.push(
+            nodeList.item(Math.floor(Math.random() * nodeList.length)).innerHTML
+          );
+        }
 
         if (linesNumber <= nodeList.length && linesNumber != 0) {
-          document.getElementById('play').innerHTML = node;
+          document.getElementById('play').innerHTML = randomLines;
         }
       }
 
-      console.log(linesNumber);
-      console.log(node);
       lineInputResult();
     });
 }
-
-// document.getElementById('play').innerHTML =
-//   xmlDoc.getElementsByTagName('play')[0].innerHTML;
-
-// document.getElementById('lines').innerHTML =
-//   xmlDoc.getElementsByTagName('line').length;
